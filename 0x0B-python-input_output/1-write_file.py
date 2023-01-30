@@ -1,11 +1,8 @@
 #!/usr/bin/python3
-"""returns number of lines"""
+"""writes to a file"""
 
 
-def number_of_lines(filename=""):
-    """number of lines"""
-    lines = 0
-    with open(filename, mode='r', encoding='utf-8') as f:
-        for line in f:
-            lines += 1
-    return lines
+def write_file(filename="", text=""):
+    """writes to file"""
+    with open(filename, mode='w', encoding='utf-8') as f:
+        return(f.write(text))
